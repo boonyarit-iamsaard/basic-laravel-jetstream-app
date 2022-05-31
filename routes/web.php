@@ -44,4 +44,10 @@ Route::middleware([
         Route::get('/dashboard', function () {
             return Inertia::render('Dashboard');
         })->name('dashboard');
+
+        Route::get('/photos', function () {
+            return Inertia::render('Admin/Photos', [
+                'photos' => Photo::all(),
+            ]);
+        })->name('photos');
     });
