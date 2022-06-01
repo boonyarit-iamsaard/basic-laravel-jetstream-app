@@ -41,7 +41,7 @@ Route::middleware([
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
-        Route::get('/dashboard', function () {
+        Route::get('/', function () {
             return Inertia::render('Dashboard');
         })->name('dashboard');
 
